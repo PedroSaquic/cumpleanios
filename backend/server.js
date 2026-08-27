@@ -132,6 +132,46 @@ app.get("/invitados", async (req, res) => {
 
 });
 
+// ==============================
+// ELIMINAR INVITADO
+// ==============================
+
+app.delete("/invitados/:id", async (req, res) => {
+
+    try {
+
+        const { id } = req.params;
+
+        const resultado = await pool.query(
+            "DELETE FROM invitados WHERE id = $1 RETURNING *",
+            [id]
+        );
+
+        if (resultado.rows.length === 0) {
+
+            return res.status(404).json({
+                error: "Invitado no encontrado"
+            });
+
+        }
+
+        res.json({
+            mensaje: "Invitado eliminado correctamente",
+            invitado: resultado.rows[0]
+        });
+
+    } catch (error) {
+
+        console.error(error);
+
+        res.status(500).json({
+            error: "Error al eliminar el invitado"
+        });
+
+    }
+
+});
+
 
 // ==============================
 // INICIAR SERVIDOR

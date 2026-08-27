@@ -376,3 +376,20 @@ tbody tr:hover {
     }
 
 }
+
+.boton-eliminar {
+    width: auto;
+    margin-top: 0;
+    padding: 8px 12px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.boton-eliminar:hover {
+    background-color: #b02a37;
+    transform: scale(1.03);
+}

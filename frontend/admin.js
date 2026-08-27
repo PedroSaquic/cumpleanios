@@ -271,6 +271,15 @@ function mostrarInvitados() {
                 <td>
                     ${invitado.acompanantes}
                 </td>
+                <td>
+    <button
+        class="boton-eliminar"
+        onclick="eliminarInvitado(${invitado.id})"
+    >
+        🗑️ Eliminar
+    </button>
+</td>
+
 
             `;
 
@@ -325,3 +334,50 @@ document
 // ==============================
 
 cargarInvitados();
+
+// ==============================
+// ELIMINAR INVITADO
+// ==============================
+
+async function eliminarInvitado(id) {
+
+    const confirmar = confirm(
+        "¿Estás seguro de que quieres eliminar este invitado?"
+    );
+
+    if (!confirmar) {
+        return;
+    }
+
+    try {
+
+        const response = await fetch(
+            `/invitados/${id}`,
+            {
+                method: "DELETE"
+            }
+        );
+
+        const data = await response.json();
+
+        if (!response.ok) {
+
+            throw new Error(data.error);
+
+        }
+
+        alert("✅ Invitado eliminado correctamente.");
+
+        cargarInvitados();
+
+    } catch (error) {
+
+        console.error(error);
+
+        alert(
+            "❌ No se pudo eliminar el invitado."
+        );
+
+    }
+
+}
