@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación de Cumpleaños 🎂</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="contenedor">
+    <section class="invitacion">
+      <div class="emoji">🎉</div>
+      <h1>¡Estás invitado!</h1>
+      <h2>🎂 Cumpleaños de Rosa 🎂</h2>
+      <p class="mensaje">
+        Ven a celebrar conmigo un día muy especial.
+        ¡Tu presencia será muy importante!
+      </p>
+      <div class="informacion">
+        <div class="dato">
+          <span>📅</span>
+          <p>
+            <strong>Fecha</strong><br>
+            Domingo 27 de septiembre de 2026
+          </p>
+        </div>
+        <div class="cuenta-regresiva">
+
+          <div id="contador">
+
+            <div class="tiempo">
+              <span id="dias">00</span>
+              <p>Días</p>
+            </div>
+
+            <div class="tiempo">
+              <span id="horas">00</span>
+              <p>Horas</p>
+            </div>
+
+            <div class="tiempo">
+              <span id="minutos">00</span>
+              <p>Minutos</p>
+            </div>
+
+            <div class="tiempo">
+              <span id="segundos">00</span>
+              <p>Segundos</p>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="dato">
+          <span>⏰</span>
+          <p>
+            <strong>Hora</strong><br>
+            1:00 PM
+          </p>
+        </div>
+        <div class="dato">
+          <span>📍</span>
+          <p>
+            <strong>Lugar</strong><br>
+            Salón de Eventos Iglesia Gotica
+          </p>
+        </div>
+      </div>
+      <h2 class="titulo-formulario">
+        Confirma tu asistencia
+      </h2>
+      <form id="formulario">
+        <label for="nombre">
+          Tu nombre
+        </label>
+        <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
+        <label>
+          ¿Asistirás?
+        </label>
+        <div class="opciones">
+          <label class="radio">
+            <input type="radio" name="asistencia" value="si" required>
+            Sí, asistiré 🎉
+          </label>
+          <label class="radio">
+            <input type="radio" name="asistencia" value="no">
+            No podré asistir 😢
+          </label>
+        </div>
+        <label for="acompanantes">
+          Número de acompañantes
+        </label>
+
+        <input type="number" id="acompanantes" min="0" value="0">
+        <button type="submit">
+          Confirmar asistencia
+        </button>
+      </form>
+      <p id="respuesta"></p>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Administrador - Cumpleaños</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+
+
+<body>
+
+    <header class="header">
+
+        <div>
+
+            <h1>
+                Panel del Desmadre
+            </h1>
+
+            <p>
+                Cumpleaños de Rosa
+            </p>
+
+        </div>
+
+
+        <button id="volver" class="boton-volver">
+            Volver a invitación
+        </button>
+
+    </header>
+
+
+    <main class="contenedor-admin">
+
+
+        <!-- ========================= -->
+        <!-- ESTADÍSTICAS -->
+        <!-- ========================= -->
+
+        <section class="estadisticas">
+
+
+            <div class="tarjeta">
+
+                <div class="icono">
+                    👥
+                </div>
+
+                <div>
+
+                    <p>
+                        Total invitados
+                    </p>
+
+                    <h2 id="total">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="tarjeta confirmados">
+
+                <div class="icono">
+                    🎉
+                </div>
+
+                <div>
+
+                    <p>
+                        Confirmados
+                    </p>
+
+                    <h2 id="confirmados">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="tarjeta no-asisten">
+
+                <div class="icono">
+                    😢
+                </div>
+
+                <div>
+
+                    <p>
+                        No asistirán
+                    </p>
+
+                    <h2 id="no-asisten">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="tarjeta">
+
+                <div class="icono">
+                    🧑‍🤝‍🧑
+                </div>
+
+                <div>
+
+                    <p>
+                        Acompañantes
+                    </p>
+
+                    <h2 id="acompanantes">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- TABLA -->
+        <!-- ========================= -->
+
+        <section class="tabla-panel">
+
+
+            <div class="titulo-panel">
+
+                <div>
+
+                    <h2>
+                        Lista de invitados
+                    </h2>
+
+                    <p>
+                        Invitados registrados
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FILTROS -->
+
+            <div class="filtros">
+
+
+                <div class="campo">
+
+                    <label for="buscar">
+                        Buscar por nombre
+                    </label>
+
+                    <input type="text" id="buscar" placeholder="Escribe un nombre...">
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="filtro">
+                        Asistencia
+                    </label>
+
+                    <select id="filtro">
+
+                        <option value="todos">
+                            Todos
+                        </option>
+
+                        <option value="true">
+                            Sí asistirán
+                        </option>
+
+                        <option value="false">
+                            No asistirán
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- TABLA -->
+
+            <div class="tabla-scroll">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                ID
+                            </th>
+
+                            <th>
+                                Nombre
+                            </th>
+
+                            <th>
+                                Asistencia
+                            </th>
+
+                            <th>
+                                Acompañantes
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="tabla">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <p id="sin-resultados" class="sin-resultados">
+                No se encontraron invitados.
+            </p>
+
+
+        </section>
+
+
+    </main>
+
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>
