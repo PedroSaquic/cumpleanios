@@ -10,10 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg,
-            #9a9dff,
-            #2081bd,
-            #2dd5a9);
+    background: red;
     padding: 20px;
 }
 
