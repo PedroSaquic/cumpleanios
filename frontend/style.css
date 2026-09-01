@@ -36,7 +36,7 @@ body {
 
 .invitacion {
     background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 25px;
+    border-radius: 15px;
     padding: 40px 30px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -57,7 +57,7 @@ h2 {
 }
 
 .mensaje {
-    color: #555;
+    color: black;
     line-height: 1.6;
     margin-bottom: 25px;
 }
@@ -135,9 +135,9 @@ button {
     padding: 15px;
     border: none;
     border-radius: 12px;
-    font-size: 17px;
+    font-size: 20px;
     cursor: pointer;
-    background-color: #ff4f81;
+    background-color: #f86c15;
     color: white;
     transition: 0.3s;
 }
@@ -175,16 +175,17 @@ button:hover {
 }
 
 .tiempo {
-    background-color: #ff4f81;
+    background-color:rgba(244, 89, 47, 0.975);
     color: white;
     min-width: 60px;
     padding: 10px 8px;
     border-radius: 12px;
+    text-align: center;
 }
 
 .tiempo span {
     display: block;
-    font-size: 15px;
+    font-size: 30px;
     font-weight: bold;
 }
 
