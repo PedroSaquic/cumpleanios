@@ -100,16 +100,16 @@ formulario.addEventListener("submit", async function (evento) {
 
         if (invitado.asistira) {
 
-            respuesta.textContent =
-                `¡Gracias ${nombre}! 🎉 Tu asistencia ha sido confirmada.`;
+            respuesta.innerHTML =
+                `¡Gracias ${nombre}! 🎉 Tu asistencia ha sido confirmada. <br> <br>` ;
 
             respuesta.className = "respuesta-confirmada";
             lanzarConfeti();
 
         } else {
 
-            respuesta.textContent =
-                `Gracias ${nombre}. Lamentamos que no puedas asistir 😢`;
+            respuesta.innerHTML =
+                `Gracias ${nombre}. Lamentamos que no puedas asistir 😢 <br> <br>`;
 
             respuesta.className = "respuesta-rechazada";
 
@@ -128,8 +128,8 @@ formulario.addEventListener("submit", async function (evento) {
 
         console.error(error);
 
-        respuesta.textContent =
-            "❌ No se pudo registrar la asistencia.";
+        respuesta.innerHTML =
+    "❌ No se pudo registrar la asistencia.<br> <br>";
 
     }
 
