@@ -297,4 +297,111 @@ button:hover {
         opacity: 0;
     }
 
+
+}
+
+/* =========================
+   PANTALLA DE INICIO
+========================= */
+
+#pantalla-inicio {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("portada.jpg") center center / cover no-repeat;
+
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+.contenido-inicio {
+    color: white;
+    padding: 30px;
+}
+
+.contenido-inicio h1 {
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+.contenido-inicio h2 {
+    font-size: 35px;
+    margin: 10px 0;
+}
+
+.contenido-inicio p {
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+/* Botón Abrir invitación */
+
+#btn-abrir {
+    padding: 18px 35px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: white;
+    color: #8b4561;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+
+    transition: transform 0.3s ease;
+}
+
+#btn-abrir:hover {
+    transform: scale(1.08);
+}
+
+/* Estado cuando se abre */
+
+#pantalla-inicio.oculta {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+/* =========================
+   BOTÓN DE MÚSICA
+========================= */
+
+#boton-musica {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 55px;
+    height: 55px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #8b4561;
+    color: white;
+
+    font-size: 23px;
+
+    cursor: pointer;
+
+    z-index: 999;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
 }

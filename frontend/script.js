@@ -365,3 +365,22 @@ function lanzarEstrellas() {
 // Ejecutar al abrir la invitación
 lanzarEstrellas();
 
+// ===============================
+// PANTALLA DE INICIO + MÚSICA
+// ===============================
+
+const pantallaInicio = document.getElementById("pantalla-inicio");
+const botonAbrir = document.getElementById("btn-abrir");
+const musica = document.getElementById("musica");
+
+
+// Cuando el usuario toca "Abrir invitación"
+botonAbrir.addEventListener("click", function () {
+
+    // Reproducir música
+    musica.play();
+
+    // Ocultar pantalla inicial
+    pantallaInicio.classList.add("oculta");
+
+});
