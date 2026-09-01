@@ -373,14 +373,67 @@ const pantallaInicio = document.getElementById("pantalla-inicio");
 const botonAbrir = document.getElementById("btn-abrir");
 const musica = document.getElementById("musica");
 
+let reproduciendo = false;
 
-// Cuando el usuario toca "Abrir invitación"
+
+// Cuando toca "Abrir invitación"
 botonAbrir.addEventListener("click", function () {
 
-    // Reproducir música
+    // Iniciar música
     musica.play();
 
     // Ocultar pantalla inicial
     pantallaInicio.classList.add("oculta");
+
+    reproduciendo = true;
+});
+
+
+// ======================================
+// PAUSAR CUANDO SALEN DE LA INVITACIÓN
+// ======================================
+
+document.addEventListener("visibilitychange", function () {
+
+    if (document.hidden) {
+
+        // La persona cambió de pestaña,
+        // bloqueó el teléfono o salió de la página
+        musica.pause();
+
+    }
+});
+
+
+// ======================================
+// PAUSAR CUANDO SE CIERRA / ABANDONA
+// ======================================
+
+window.addEventListener("pagehide", function () {
+    musica.pause();
+});
+
+
+// ======================================
+// REPRODUCIR SOLO 2 VECES
+// ======================================
+
+let vecesReproducida = 0;
+
+musica.addEventListener("ended", function () {
+
+    vecesReproducida++;
+
+    if (vecesReproducida < 2) {
+
+        // Volver a comenzar
+        musica.currentTime = 0;
+        musica.play();
+
+    } else {
+
+        // Ya se reprodujo 2 veces
+        musica.pause();
+    }
 
 });
